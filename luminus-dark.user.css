@@ -17,6 +17,7 @@
 @-moz-document domain("luminus.nus.edu.sg") {
     body {
         --primaryColor: #144990 !important;
+        --primaryColorLight: #74a4e1 !important;
         --background: #121212 !important;
         --backgroundLight: #222 !important;
         --selectedButtonText: #FFBB82 !important;
@@ -35,25 +36,210 @@
         --highlightColor: #404040 !important;
         --hintColor: #757575 !important;
         --dividerColor: #757575 !important;
-        }
-        
+    }
+    
     body {
-            background-color: var(--background);
+        background-color: var(--background);
+        color: var(--textColor);
+    }
+    
+    /* Custom scrollbar */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: var(--backgroundLight);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: var(--selectedBackground);
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
     }
         
     a {
         color: var(--linkColor);
         }
     
-    .main-nav {
-        background-color: var(--primaryColor) !important; 
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--primaryColorLight);
     }
     
-    .module-navigation,
-    .layout-header {
+    .single-module {
+        background: var(--background) !important;
+    }
+    
+    nav.pills.vertical .color-blue,
+    ol.breadcrumb a{
+        color: var(--primaryColorLight) !important;
+    }
+    
+    @media (max-width: 1199px) and (min-width: 768px) {
+        a.open-menu {
+            color: var(--primaryColorLight) !important;
+        }
+        
+        a.open-menu .icon-stroke {
+            stroke: var(--primaryColorLight) !important;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .horizontal a.open-menu .icon-fill#Menu {
+            fill: var(--primaryColorLight) !important;
+        } 
+    }
+    
+    .actual-navs {
+        background: var(--backgroundLight) !important;
+    }
+    
+    .name.disable-select p.black {
+        color: var(--textColor) !important;
+    }
+    
+    .stat-icon svg g g.icon-fill {
+        fill: white !important;
+    }
+    
+    @media (min-width: 1200px) {
+        .main-nav {
+            background-color: var(--primaryColor) !important; 
+        }
+        
+        .main-content {
+            background-color: var(--background) !important;
+            color: var(--textColor);
+        }
+        
+        aside:first-child,
+        .layout-header {
+            background: var(--backgroundLight) !important;
+        }
+    }
+    
+    @media (max-width: 1199px) and (min-width: 768px) {
+        .faux-main-nav {
+            background-color: var(--primaryColor) !important; 
+        }
+        
+        .main-nav a, .subapplication-navigation a {
+            color: var(--textColor) !important; 
+        }
+    
+        .main-nav a:hover, .subapplication-navigation a:hover {
+            background: var(--hoveredBackground) !important; 
+        }
+        
+        .main-nav a.active, .subapplication-navigation a.active {
+            border-color: var(--accentColor) !important;
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .single-module > ng-component {
+            background: var(--background) !important;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        list-view-item {
+            background: var(--backgroundLight) !important;
+        }
+        
+        column {
+            color: var(--textColor) !important;
+        }
+        
+        .layout-header {
+            background:  var(--primaryColor) !important;
+        }
+    }
+    
+    nav.pills {
+        background: var(--backgroundLight) !important;
+    }
+    
+    nav.pills a {
+        color: var(--textColor);
+    }
+    
+    nav.pills a.selected {
+        color: var(--textColor);
+        background: var(--selectedBackground);
+    }
+    
+    nav.pills a:hover {
+        background: var(--hoveredBackground);
+    }
+    
+    .module-navigation {
         background-color: var(--background) !important;
     }
     
+    .infolet-box,
+    timetable-module-items,
+    timetable-exams {
+        background: var(--backgroundLight) !important;
+        border-color: var(--backgroundLight) !important;
+        color: var(--textColor) !important;
+    }
+    
+    .module-code {
+        color: var(--primaryColorLight) !important;
+    }
+    
+    @media (min-width: 768px) {
+        aside .layout-header small {
+            color: var(--primaryColorLight) !important;   
+        }
+    }
+    
+    /* Task report */
+    section column,
+    list-view-tools {
+        background: var(--backgroundLight) !important;
+        border-color: var(--dividerColor) !important;
+    }
+    
+    @media (min-width: 1200px) {
+        section header > :last-child {
+            background: var(--backgroundLight) !important;
+            border-color: var(--dividerColor) !important;
+        }
+    }
+    
+    tool-header {
+        border-color: var(--dividerColor) !important;
+    }
+    
+    label.checkbox input + span:before {
+        background-color: var(--selectedBackground) !important;
+        border-color: var(--backgroundLight) !important;
+    }
+    
+    /* Article */
+    article:not(.terms-service):not(.no-content) {
+        background: var(--backgroundLight) !important;
+        border-color: var(--backgroundLight) !important;
+    }
+    
+    announcement-list-item article h3 {
+        color: var(--textFocusColor) !important;
+    }
+    
+    article .content-wrapper .fade-out {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--backgroundLight) 85%) !important;
+    }
+
     /* Form control */
     .form-control {
         background: var(--backgroundLight);
@@ -61,8 +247,8 @@
     }
     
     .search-field > div icon[name=search] {
-        background: transparent;
-        box-shadow: none;
+        background: transparent !important;
+        box-shadow: none !important;
     }
     
     .search-field > div .icon-fill {
@@ -185,4 +371,22 @@
         background-color: var(--backgroundLight) !important;
     }
 
+    
+    .view-summary{
+        color: var(--textColor);
+    }
+    
+    p.edx-info {
+        color: var(--textSecondaryColor) !important;
+    }
+    
+    /* Pagination */
+    .pagination > li:not(.disabled) > a, .pagination > li > span {
+        background: var(--backgroundLight) !important;
+    }
+    
+    .pagination > li > a, .pagination > li > span {
+        border-color: var(--dividerColor) !important;
+        color: var(--linkColor);
+    }
 }
