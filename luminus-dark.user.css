@@ -1,21 +1,4 @@
-/* ==UserStyle==
-@name           LumiNUS Dark
-@namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.0
-@description    A dark theme for LumiNUS
-@author         Jeff Sieu
-==/UserStyle== */
-
-/* ==UserStyle==
-@name           Luminus Dark
-@namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.0
-@description    A dark theme for Luminus
-@author         Jeff Sieu
-==/UserStyle== */
-
-@-moz-document domain("luminus.nus.edu.sg") {
-    body {
+body {
     --primaryColor: #144990 !important;
     --background: #121212 !important;
     --backgroundLight: #222 !important;
@@ -97,4 +80,92 @@
         color: var(--textFocusColor) !important;
         border-bottom-color: var(--accentColor) !important;
     }
-}
+
+    /* Login Page */
+
+    .homepage {
+        background-color: var(--background) !important;
+    }
+
+    .homepage .homepage-section-login{
+        background-color: var(--backgroundLight) !important;
+    }
+
+    /* Home page */
+    p{
+        color: var(--textColor) !important;
+    }
+    .main-content {
+        background: var(--background) !important;
+        
+    }
+    .main-content h1, h2, h3, h4{
+        color: var(--textColor) !important;
+    }
+    .infolet-box {
+        background: var(--backgroundLight) !important;
+        border:  none !important ;
+    }
+    .new-announcements ng-star-inserted{
+        background: var(--backgroundLight) !important;
+    }
+    .announcements section{
+        background: var(--backgroundLight) !important;
+        border: none;
+        border-bottom: 1px solid var(--dividerColor) !important;
+    }
+    .announcements section .announcement  {
+        border-bottom: 1px solid var(--dividerColor) !important;
+    }
+    .announcements section h4, .content{
+        color: var(--textColor) !important;
+    }
+    /* Task list */
+    .whats-due task-list {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+    .whats-due .task{
+        background: var(--backgroundLight) !important;
+        border-bottom: 1px solid var(--dividerColor) !important;
+    }
+
+    /* Whats Next */
+    .whats-next up-next {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+    .whats-next up-next span.title, span.time, span.location{
+        color: var(--textColor) !important;
+    }
+
+    /* Exam Countdown */
+    
+    exam-countdown {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+    exam-countdown span, time{
+        color: var(--textColor) !important;
+    }
+
+    /* Surveys */
+    card-list article {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+
+    card-list article .alert-info{
+        background: var(--backgroundLight) !important;
+        border-color: var(--dividerColor) !important;
+    }
+    card-list article p{
+        color: var(--textColor) !important;
+    }
+    
+    /* this is fucked */
+    html body{
+        background-color: var(--backgroundLight) !important;
+    }
+
+    
