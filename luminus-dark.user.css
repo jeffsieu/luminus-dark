@@ -1,0 +1,30 @@
+/* ==UserStyle==
+@name           LumiNUS Dark
+@namespace      github.com/jeffsieu/luminus-dark
+@version        1.0.0
+@description    A dark theme for LumiNUS
+@author         Jeff Sieu
+==/UserStyle== */
+
+@-moz-document domain("luminus.nus.edu.sg") {
+    body {
+    --primaryColor: rgb(0, 199, 60) !important;
+    --selectedBackground: #545659 !important;
+    --background: #121212 !important;
+    --backgroundLight: #222 !important;
+    --selectedButtonText: #FFBB82 !important;
+    --hoveredButtonText: #ccc !important;
+    --hoveredBackground: rgb(81, 81, 81) !important;
+    --activeBackground: #404040 !important;
+    --topColor: #333 !important;
+    --bottomColor: rgb(18, 18, 18) !important;
+    --focusTextColor: #ccc !important;
+    --textColor: #dfdfdf !important;
+    --borderColor: #333 !important;
+    --hoverTextColor: #acacac !important;
+    --accentColor: #79b3ff !important;
+    --headingColor: #9B9B9B !important;
+    --highlightColor: #404040 !important;
+    }
+    
+}
