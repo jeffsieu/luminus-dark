@@ -6,25 +6,95 @@
 @author         Jeff Sieu
 ==/UserStyle== */
 
+/* ==UserStyle==
+@name           Luminus Dark
+@namespace      github.com/jeffsieu/luminus-dark
+@version        1.0.0
+@description    A dark theme for Luminus
+@author         Jeff Sieu
+==/UserStyle== */
+
 @-moz-document domain("luminus.nus.edu.sg") {
     body {
-    --primaryColor: rgb(0, 199, 60) !important;
-    --selectedBackground: #545659 !important;
+    --primaryColor: #144990 !important;
     --background: #121212 !important;
     --backgroundLight: #222 !important;
     --selectedButtonText: #FFBB82 !important;
     --hoveredButtonText: #ccc !important;
+    --selectedBackground: #545659 !important;
     --hoveredBackground: rgb(81, 81, 81) !important;
     --activeBackground: #404040 !important;
-    --topColor: #333 !important;
-    --bottomColor: rgb(18, 18, 18) !important;
-    --focusTextColor: #ccc !important;
     --textColor: #dfdfdf !important;
+    --textSecondaryColor: #a6a6a6 !important;
+    --textFocusColor: #ccc !important;
     --borderColor: #333 !important;
     --hoverTextColor: #acacac !important;
-    --accentColor: #79b3ff !important;
+    --linkColor:rgb(126, 177, 242) !important;
+    --accentColor: #fadc89 !important;
     --headingColor: #9B9B9B !important;
     --highlightColor: #404040 !important;
+    --hintColor: #757575 !important;
+    --dividerColor: #757575 !important;
     }
     
+    body {
+        background-color: var(--background);
+    }
+    
+    a {
+        color: var(--linkColor);
+    }
+    
+    .main-nav {
+        background-color: var(--primaryColor) !important; 
+    }
+    
+    .module-navigation,
+    .layout-header {
+        background-color: var(--background) !important;
+    }
+    
+    /* Form control */
+    .form-control {
+        background: var(--backgroundLight);
+        border-color: var(--dividerColor);
+    }
+    
+    .search-field > div icon[name=search] {
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    .search-field > div .icon-fill {
+        fill: var(--hintColor) !important;
+    }
+    
+    /* Module cards */
+    a.module-card {
+        background: var(--backgroundLight) !important;
+        border-color: var(--backgroundLight) !important;
+        color: var(--textColor) !important;
+    }
+    
+    a.module-card:hover {
+        border-color: var(--accentColor) !important;
+    }
+    
+    a.module-card .fade-out {
+        background-image: none !important;
+    }
+    
+    a.module-card abbr {
+        color: var(--textFocusColor) !important;
+    }
+    
+    a.module-card span {
+        color: var(--textSecondaryColor) !important;
+    }
+    
+    /* Mini nav bar */
+    .horizontal .nav.nav-underline > *.active {
+        color: var(--textFocusColor) !important;
+        border-bottom-color: var(--accentColor) !important;
+    }
 }
