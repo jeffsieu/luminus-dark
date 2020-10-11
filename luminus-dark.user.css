@@ -16,34 +16,34 @@
 
 @-moz-document domain("luminus.nus.edu.sg") {
     body {
-    --primaryColor: #144990 !important;
-    --background: #121212 !important;
-    --backgroundLight: #222 !important;
-    --selectedButtonText: #FFBB82 !important;
-    --hoveredButtonText: #ccc !important;
-    --selectedBackground: #545659 !important;
-    --hoveredBackground: rgb(81, 81, 81) !important;
-    --activeBackground: #404040 !important;
-    --textColor: #dfdfdf !important;
-    --textSecondaryColor: #a6a6a6 !important;
-    --textFocusColor: #ccc !important;
-    --borderColor: #333 !important;
-    --hoverTextColor: #acacac !important;
-    --linkColor:rgb(126, 177, 242) !important;
-    --accentColor: #fadc89 !important;
-    --headingColor: #9B9B9B !important;
-    --highlightColor: #404040 !important;
-    --hintColor: #757575 !important;
-    --dividerColor: #757575 !important;
-    }
-    
+        --primaryColor: #144990 !important;
+        --background: #121212 !important;
+        --backgroundLight: #222 !important;
+        --selectedButtonText: #FFBB82 !important;
+        --hoveredButtonText: #ccc !important;
+        --selectedBackground: #545659 !important;
+        --hoveredBackground: rgb(81, 81, 81) !important;
+        --activeBackground: #404040 !important;
+        --textColor: #dfdfdf !important;
+        --textSecondaryColor: #a6a6a6 !important;
+        --textFocusColor: #ccc !important;
+        --borderColor: #333 !important;
+        --hoverTextColor: #acacac !important;
+        --linkColor:rgb(126, 177, 242) !important;
+        --accentColor: #fadc89 !important;
+        --headingColor: #9B9B9B !important;
+        --highlightColor: #404040 !important;
+        --hintColor: #757575 !important;
+        --dividerColor: #757575 !important;
+        }
+        
     body {
-        background-color: var(--background);
+            background-color: var(--background);
     }
-    
+        
     a {
         color: var(--linkColor);
-    }
+        }
     
     .main-nav {
         background-color: var(--primaryColor) !important; 
@@ -97,4 +97,92 @@
         color: var(--textFocusColor) !important;
         border-bottom-color: var(--accentColor) !important;
     }
+
+    /* Login Page */
+
+    .homepage {
+        background-color: var(--background) !important;
+    }
+
+    .homepage .homepage-section-login{
+        background-color: var(--backgroundLight) !important;
+    }
+
+    /* Home page */
+    p{
+        color: var(--textColor) !important;
+    }
+    .main-content {
+        background: var(--background) !important;
+        
+    }
+    .main-content h1, h2, h3, h4{
+        color: var(--textColor) !important;
+    }
+    .infolet-box {
+        background: var(--backgroundLight) !important;
+        border:  none !important ;
+    }
+    .new-announcements ng-star-inserted{
+        background: var(--backgroundLight) !important;
+    }
+    .announcements section{
+        background: var(--backgroundLight) !important;
+        border: none;
+        border-bottom: 1px solid var(--dividerColor) !important;
+    }
+    .announcements section .announcement  {
+        border-bottom: 1px solid var(--dividerColor) !important;
+    }
+    .announcements section h4, .content{
+        color: var(--textColor) !important;
+    }
+    /* Task list */
+    .whats-due task-list {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+    .whats-due .task{
+        background: var(--backgroundLight) !important;
+        border-bottom: 1px solid var(--dividerColor) !important;
+    }
+
+    /* Whats Next */
+    .whats-next up-next {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+    .whats-next up-next span.title, span.time, span.location{
+        color: var(--textColor) !important;
+    }
+
+    /* Exam Countdown */
+    
+    exam-countdown {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+    exam-countdown span, time{
+        color: var(--textColor) !important;
+    }
+
+    /* Surveys */
+    card-list article {
+        background: var(--backgroundLight) !important;
+        border: none !important;
+    }
+
+    card-list article .alert-info{
+        background: var(--backgroundLight) !important;
+        border-color: var(--dividerColor) !important;
+    }
+    card-list article p{
+        color: var(--textColor) !important;
+    }
+    
+    /* this is fucked */
+    html body{
+        background-color: var(--backgroundLight) !important;
+    }
+
 }
