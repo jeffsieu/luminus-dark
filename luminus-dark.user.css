@@ -1,32 +1,49 @@
-body {
-    --primaryColor: #144990 !important;
-    --background: #121212 !important;
-    --backgroundLight: #222 !important;
-    --selectedButtonText: #FFBB82 !important;
-    --hoveredButtonText: #ccc !important;
-    --selectedBackground: #545659 !important;
-    --hoveredBackground: rgb(81, 81, 81) !important;
-    --activeBackground: #404040 !important;
-    --textColor: #dfdfdf !important;
-    --textSecondaryColor: #a6a6a6 !important;
-    --textFocusColor: #ccc !important;
-    --borderColor: #333 !important;
-    --hoverTextColor: #acacac !important;
-    --linkColor:rgb(126, 177, 242) !important;
-    --accentColor: #fadc89 !important;
-    --headingColor: #9B9B9B !important;
-    --highlightColor: #404040 !important;
-    --hintColor: #757575 !important;
-    --dividerColor: #757575 !important;
-    }
-    
+/* ==UserStyle==
+@name           LumiNUS Dark
+@namespace      github.com/jeffsieu/luminus-dark
+@version        1.0.0
+@description    A dark theme for LumiNUS
+@author         Jeff Sieu
+==/UserStyle== */
+
+/* ==UserStyle==
+@name           Luminus Dark
+@namespace      github.com/jeffsieu/luminus-dark
+@version        1.0.0
+@description    A dark theme for Luminus
+@author         Jeff Sieu
+==/UserStyle== */
+
+@-moz-document domain("luminus.nus.edu.sg") {
     body {
-        background-color: var(--background);
+        --primaryColor: #144990 !important;
+        --background: #121212 !important;
+        --backgroundLight: #222 !important;
+        --selectedButtonText: #FFBB82 !important;
+        --hoveredButtonText: #ccc !important;
+        --selectedBackground: #545659 !important;
+        --hoveredBackground: rgb(81, 81, 81) !important;
+        --activeBackground: #404040 !important;
+        --textColor: #dfdfdf !important;
+        --textSecondaryColor: #a6a6a6 !important;
+        --textFocusColor: #ccc !important;
+        --borderColor: #333 !important;
+        --hoverTextColor: #acacac !important;
+        --linkColor:rgb(126, 177, 242) !important;
+        --accentColor: #fadc89 !important;
+        --headingColor: #9B9B9B !important;
+        --highlightColor: #404040 !important;
+        --hintColor: #757575 !important;
+        --dividerColor: #757575 !important;
+        }
+        
+    body {
+            background-color: var(--background);
     }
-    
+        
     a {
         color: var(--linkColor);
-    }
+        }
     
     .main-nav {
         background-color: var(--primaryColor) !important; 
@@ -168,4 +185,4 @@ body {
         background-color: var(--backgroundLight) !important;
     }
 
-    
+}
