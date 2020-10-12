@@ -34,6 +34,7 @@
     --dividerColor: #757575 !important;
     --green: #73d05c !important;
     --red: #ff757e !important;
+    --invertedTextWhite: #000000 !important;
   }
 
   body {
@@ -366,6 +367,7 @@
     .subapplication-navigation .btn-link.active {
       border-bottom-color: var(--accentColor) !important;
     }
+    
   }
 
   tool-header {
@@ -769,4 +771,74 @@
     border-color: var(--backgroundLight) !important;
     background: var(--textColor) !important;
   }
+
+  /* Forums */
+  @media (min-width: 1200px) {
+    section header > div:last-child:not(.section-right){
+      background-color: var(--background) !important;
+    }
+    section list-view-item small span{
+      color: var(--textSecondaryColor) !important;
+    }
+  }
+
+  @media (min-width: 768px){
+    section tool-layout div list-view .align-top {
+      background: var(--backgroundLight) !important;
+      border-color: var(--dividerColor) !important
+    }
+    section tool-layout div list-view .div.heading-description{
+      background: var(--background) !important;
+    }
+    .hide-header .bd list-view-item:first-of-type >:last-child{
+      border-top: 1px solid var(--dividerColor) !important;
+    }
+    section tool-layout div list-view-item column.photo, column.lump, column.replyCount, column.viewCount, column.latestPost, column.pin {
+      border-bottom : 1px solid var(--dividerColor)  !important;
+    }
+  }
+
+  tool-content div .alert-info{
+    background-color: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+
+  ng-component div.posts{
+    background: var(--backgroundLight) !important;
+  }
+  ng-component article.post{
+    background: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+  ng-component article.post .show-scroll, .border-line{
+    border-color: var(--dividerColor) !important;
+  }
+  ng-component article.post{
+    background: var(--background) !important;
+  }
+  ng-component section div posting .details{
+    background: var(--backgroundLight) !important;
+  }
+  form {
+    background: var(--backgroundLight) !important;
+  }
+  #cke_editor1 {
+    filter: invert(1) !important;
+    color: var(--textColor) !important;
+  }
+  #cke_editor1 span{
+    color: var(--invertedTextWhite) !important;
+  }
+
+  /* Multimedia */
+  ng-component iframe{
+    filter: invert(1) hue-rotate(180deg) !important;
+  }
+
+  /* Web Lecture */
+  section div list-view-item list-view-tools{
+    background: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
 }
+
