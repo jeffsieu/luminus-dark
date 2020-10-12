@@ -1,392 +1,403 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.0
+@version        1.0.1
 @description    A dark theme for LumiNUS
-@author         Jeff Sieu
-==/UserStyle== */
-
-/* ==UserStyle==
-@name           Luminus Dark
-@namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.0
-@description    A dark theme for Luminus
-@author         Jeff Sieu
+@author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
 
 @-moz-document domain("luminus.nus.edu.sg") {
-    body {
-        --primaryColor: #144990 !important;
-        --primaryColorLight: #74a4e1 !important;
-        --background: #121212 !important;
-        --backgroundLight: #222 !important;
-        --selectedButtonText: #FFBB82 !important;
-        --hoveredButtonText: #ccc !important;
-        --selectedBackground: #545659 !important;
-        --hoveredBackground: rgb(81, 81, 81) !important;
-        --activeBackground: #404040 !important;
-        --textColor: #dfdfdf !important;
-        --textSecondaryColor: #a6a6a6 !important;
-        --textFocusColor: #ccc !important;
-        --borderColor: #333 !important;
-        --hoverTextColor: #acacac !important;
-        --linkColor:rgb(126, 177, 242) !important;
-        --accentColor: #fadc89 !important;
-        --headingColor: #9B9B9B !important;
-        --highlightColor: #404040 !important;
-        --hintColor: #757575 !important;
-        --dividerColor: #757575 !important;
-    }
-    
-    body {
-        background-color: var(--background);
-        color: var(--textColor);
-    }
-    
-    /* Custom scrollbar */
-    /* width */
-    ::-webkit-scrollbar {
-        width: 5px;
-        height: 5px;
+  body {
+    --primaryColor: #144990 !important;
+    --primaryColorLight: #74a4e1 !important;
+    --background: #121212 !important;
+    --backgroundLight: #222 !important;
+    --selectedButtonText: #ffbb82 !important;
+    --hoveredButtonText: #ccc !important;
+    --selectedBackground: #545659 !important;
+    --hoveredBackground: rgb(81, 81, 81) !important;
+    --activeBackground: #404040 !important;
+    --textColor: #dfdfdf !important;
+    --textSecondaryColor: #a6a6a6 !important;
+    --textFocusColor: #ccc !important;
+    --borderColor: #333 !important;
+    --hoverTextColor: #acacac !important;
+    --linkColor: rgb(126, 177, 242) !important;
+    --accentColor: #fadc89 !important;
+    --headingColor: #9b9b9b !important;
+    --highlightColor: #404040 !important;
+    --hintColor: #757575 !important;
+    --dividerColor: #757575 !important;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--textColor);
+  }
+
+  /* Custom scrollbar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--backgroundLight);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--selectedBackground);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  a {
+    color: var(--linkColor);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--primaryColorLight);
+  }
+
+  .single-module {
+    background: var(--background) !important;
+  }
+
+  nav.pills.vertical .color-blue,
+  ol.breadcrumb a {
+    color: var(--primaryColorLight) !important;
+  }
+
+  @media (max-width: 1199px) and (min-width: 768px) {
+    a.open-menu {
+      color: var(--primaryColorLight) !important;
     }
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-      background: var(--backgroundLight);
+    a.open-menu .icon-stroke {
+      stroke: var(--primaryColorLight) !important;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .horizontal a.open-menu .icon-fill#Menu {
+      fill: var(--primaryColorLight) !important;
+    }
+  }
+
+  .actual-navs {
+    background: var(--backgroundLight) !important;
+  }
+
+  .name.disable-select p.black {
+    color: var(--textColor) !important;
+  }
+
+  .stat-icon svg g g.icon-fill {
+    fill: white !important;
+  }
+
+  @media (min-width: 1200px) {
+    .main-nav {
+      background-color: var(--primaryColor) !important;
     }
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: var(--selectedBackground);
-    }
-
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #555;
-    }
-        
-    a {
-        color: var(--linkColor);
-        }
-    
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--primaryColorLight);
-    }
-    
-    .single-module {
-        background: var(--background) !important;
-    }
-    
-    nav.pills.vertical .color-blue,
-    ol.breadcrumb a{
-        color: var(--primaryColorLight) !important;
-    }
-    
-    @media (max-width: 1199px) and (min-width: 768px) {
-        a.open-menu {
-            color: var(--primaryColorLight) !important;
-        }
-        
-        a.open-menu .icon-stroke {
-            stroke: var(--primaryColorLight) !important;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        .horizontal a.open-menu .icon-fill#Menu {
-            fill: var(--primaryColorLight) !important;
-        } 
-    }
-    
-    .actual-navs {
-        background: var(--backgroundLight) !important;
-    }
-    
-    .name.disable-select p.black {
-        color: var(--textColor) !important;
-    }
-    
-    .stat-icon svg g g.icon-fill {
-        fill: white !important;
-    }
-    
-    @media (min-width: 1200px) {
-        .main-nav {
-            background-color: var(--primaryColor) !important; 
-        }
-        
-        .main-content {
-            background-color: var(--background) !important;
-            color: var(--textColor);
-        }
-        
-        aside:first-child,
-        .layout-header {
-            background: var(--backgroundLight) !important;
-        }
-    }
-    
-    @media (max-width: 1199px) and (min-width: 768px) {
-        .faux-main-nav {
-            background-color: var(--primaryColor) !important; 
-        }
-        
-        .main-nav a, .subapplication-navigation a {
-            color: var(--textColor) !important; 
-        }
-    
-        .main-nav a:hover, .subapplication-navigation a:hover {
-            background: var(--hoveredBackground) !important; 
-        }
-        
-        .main-nav a.active, .subapplication-navigation a.active {
-            border-color: var(--accentColor) !important;
-        }
-    }
-    
-    @media (max-width: 991px) {
-        .single-module > ng-component {
-            background: var(--background) !important;
-        }
-    }
-    
-    @media (max-width: 767px) {
-        list-view-item {
-            background: var(--backgroundLight) !important;
-        }
-        
-        column {
-            color: var(--textColor) !important;
-        }
-        
-        .layout-header {
-            background:  var(--primaryColor) !important;
-        }
-    }
-    
-    nav.pills {
-        background: var(--backgroundLight) !important;
-    }
-    
-    nav.pills a {
-        color: var(--textColor);
-    }
-    
-    nav.pills a.selected {
-        color: var(--textColor);
-        background: var(--selectedBackground);
-    }
-    
-    nav.pills a:hover {
-        background: var(--hoveredBackground);
-    }
-    
-    .module-navigation {
-        background-color: var(--background) !important;
-    }
-    
-    .infolet-box,
-    timetable-module-items,
-    timetable-exams {
-        background: var(--backgroundLight) !important;
-        border-color: var(--backgroundLight) !important;
-        color: var(--textColor) !important;
-    }
-    
-    .module-code {
-        color: var(--primaryColorLight) !important;
-    }
-    
-    @media (min-width: 768px) {
-        aside .layout-header small {
-            color: var(--primaryColorLight) !important;   
-        }
-    }
-    
-    /* Task report */
-    section column,
-    list-view-tools {
-        background: var(--backgroundLight) !important;
-        border-color: var(--dividerColor) !important;
-    }
-    
-    @media (min-width: 1200px) {
-        section header > :last-child {
-            background: var(--backgroundLight) !important;
-            border-color: var(--dividerColor) !important;
-        }
-    }
-    
-    tool-header {
-        border-color: var(--dividerColor) !important;
-    }
-    
-    label.checkbox input + span:before {
-        background-color: var(--selectedBackground) !important;
-        border-color: var(--backgroundLight) !important;
-    }
-    
-    /* Article */
-    article:not(.terms-service):not(.no-content) {
-        background: var(--backgroundLight) !important;
-        border-color: var(--backgroundLight) !important;
-    }
-    
-    announcement-list-item article h3 {
-        color: var(--textFocusColor) !important;
-    }
-    
-    article .content-wrapper .fade-out {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--backgroundLight) 85%) !important;
-    }
-
-    /* Form control */
-    .form-control {
-        background: var(--backgroundLight);
-        border-color: var(--dividerColor);
-    }
-    
-    .search-field > div icon[name=search] {
-        background: transparent !important;
-        box-shadow: none !important;
-    }
-    
-    .search-field > div .icon-fill {
-        fill: var(--hintColor) !important;
-    }
-    
-    /* Module cards */
-    a.module-card {
-        background: var(--backgroundLight) !important;
-        border-color: var(--backgroundLight) !important;
-        color: var(--textColor) !important;
-    }
-    
-    a.module-card:hover {
-        border-color: var(--accentColor) !important;
-    }
-    
-    a.module-card .fade-out {
-        background-image: none !important;
-    }
-    
-    a.module-card abbr {
-        color: var(--textFocusColor) !important;
-    }
-    
-    a.module-card span {
-        color: var(--textSecondaryColor) !important;
-    }
-    
-    /* Mini nav bar */
-    .horizontal .nav.nav-underline > *.active {
-        color: var(--textFocusColor) !important;
-        border-bottom-color: var(--accentColor) !important;
-    }
-
-    /* Login Page */
-
-    .homepage {
-        background-color: var(--background) !important;
-    }
-
-    .homepage .homepage-section-login{
-        background-color: var(--backgroundLight) !important;
-    }
-
-    /* Home page */
-    p{
-        color: var(--textColor) !important;
-    }
     .main-content {
-        background: var(--background) !important;
-        
-    }
-    .main-content h1, h2, h3, h4{
-        color: var(--textColor) !important;
-    }
-    .infolet-box {
-        background: var(--backgroundLight) !important;
-        border:  none !important ;
-    }
-    .new-announcements ng-star-inserted{
-        background: var(--backgroundLight) !important;
-    }
-    .announcements section{
-        background: var(--backgroundLight) !important;
-        border: none;
-        border-bottom: 1px solid var(--dividerColor) !important;
-    }
-    .announcements section .announcement  {
-        border-bottom: 1px solid var(--dividerColor) !important;
-    }
-    .announcements section h4, .content{
-        color: var(--textColor) !important;
-    }
-    /* Task list */
-    .whats-due task-list {
-        background: var(--backgroundLight) !important;
-        border: none !important;
-    }
-    .whats-due .task{
-        background: var(--backgroundLight) !important;
-        border-bottom: 1px solid var(--dividerColor) !important;
+      background-color: var(--background) !important;
+      color: var(--textColor);
     }
 
-    /* Whats Next */
-    .whats-next up-next {
-        background: var(--backgroundLight) !important;
-        border: none !important;
+    aside:first-child,
+    .layout-header {
+      background: var(--backgroundLight) !important;
     }
-    .whats-next up-next span.title, span.time, span.location{
-        color: var(--textColor) !important;
+  }
+
+  @media (max-width: 1199px) and (min-width: 768px) {
+    .faux-main-nav {
+      background-color: var(--primaryColor) !important;
     }
 
-    /* Exam Countdown */
-    
-    exam-countdown {
-        background: var(--backgroundLight) !important;
-        border: none !important;
-    }
-    exam-countdown span, time{
-        color: var(--textColor) !important;
+    .main-nav a,
+    .subapplication-navigation a {
+      color: var(--textColor) !important;
     }
 
-    /* Surveys */
-    card-list article {
-        background: var(--backgroundLight) !important;
-        border: none !important;
+    .main-nav a:hover,
+    .subapplication-navigation a:hover {
+      background: var(--hoveredBackground) !important;
     }
 
-    card-list article .alert-info{
-        background: var(--backgroundLight) !important;
-        border-color: var(--dividerColor) !important;
+    .main-nav a.active,
+    .subapplication-navigation a.active {
+      border-color: var(--accentColor) !important;
     }
-    card-list article p{
-        color: var(--textColor) !important;
+  }
+
+  @media (max-width: 991px) {
+    .single-module > ng-component {
+      background: var(--background) !important;
     }
-    
-    /* this is fucked */
-    html body{
-        background-color: var(--backgroundLight) !important;
+  }
+
+  @media (max-width: 767px) {
+    list-view-item {
+      background: var(--backgroundLight) !important;
     }
 
-    
-    .view-summary{
-        color: var(--textColor);
+    column {
+      color: var(--textColor) !important;
     }
-    
-    p.edx-info {
-        color: var(--textSecondaryColor) !important;
+
+    .layout-header {
+      background: var(--primaryColor) !important;
     }
-    
-    /* Pagination */
-    .pagination > li:not(.disabled) > a, .pagination > li > span {
-        background: var(--backgroundLight) !important;
+  }
+
+  nav.pills {
+    background: var(--backgroundLight) !important;
+  }
+
+  nav.pills a {
+    color: var(--textColor);
+  }
+
+  nav.pills a.selected {
+    color: var(--textColor);
+    background: var(--selectedBackground);
+  }
+
+  nav.pills a:hover {
+    background: var(--hoveredBackground);
+  }
+
+  .module-navigation {
+    background-color: var(--background) !important;
+  }
+
+  .infolet-box,
+  timetable-module-items,
+  timetable-exams {
+    background: var(--backgroundLight) !important;
+    border-color: var(--backgroundLight) !important;
+    color: var(--textColor) !important;
+  }
+
+  .module-code {
+    color: var(--primaryColorLight) !important;
+  }
+
+  @media (min-width: 768px) {
+    aside .layout-header small {
+      color: var(--primaryColorLight) !important;
     }
-    
-    .pagination > li > a, .pagination > li > span {
-        border-color: var(--dividerColor) !important;
-        color: var(--linkColor);
+  }
+
+  /* Task report */
+  section column,
+  list-view-tools {
+    background: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+
+  @media (min-width: 1200px) {
+    section header > :last-child {
+      background: var(--backgroundLight) !important;
+      border-color: var(--dividerColor) !important;
     }
+  }
+
+  tool-header {
+    border-color: var(--dividerColor) !important;
+  }
+
+  label.checkbox input + span:before {
+    background-color: var(--selectedBackground) !important;
+    border-color: var(--backgroundLight) !important;
+  }
+
+  /* Article */
+  article:not(.terms-service):not(.no-content) {
+    background: var(--backgroundLight) !important;
+    border-color: var(--backgroundLight) !important;
+  }
+
+  announcement-list-item article h3 {
+    color: var(--textFocusColor) !important;
+  }
+
+  article .content-wrapper .fade-out {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      var(--backgroundLight) 85%
+    ) !important;
+  }
+
+  /* Form control */
+  .form-control {
+    background: var(--backgroundLight);
+    border-color: var(--dividerColor);
+  }
+
+  .search-field > div icon[name="search"] {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .search-field > div .icon-fill {
+    fill: var(--hintColor) !important;
+  }
+
+  /* Module cards */
+  a.module-card {
+    background: var(--backgroundLight) !important;
+    border-color: var(--backgroundLight) !important;
+    color: var(--textColor) !important;
+  }
+
+  a.module-card:hover {
+    border-color: var(--accentColor) !important;
+  }
+
+  a.module-card .fade-out {
+    background-image: none !important;
+  }
+
+  a.module-card abbr {
+    color: var(--textFocusColor) !important;
+  }
+
+  a.module-card span {
+    color: var(--textSecondaryColor) !important;
+  }
+
+  /* Mini nav bar */
+  .horizontal .nav.nav-underline > *.active {
+    color: var(--textFocusColor) !important;
+    border-bottom-color: var(--accentColor) !important;
+  }
+
+  /* Login Page */
+
+  .homepage {
+    background-color: var(--background) !important;
+  }
+
+  .homepage .homepage-section-login {
+    background-color: var(--backgroundLight) !important;
+  }
+
+  /* Home page */
+  p {
+    color: var(--textColor) !important;
+  }
+  .main-content {
+    background: var(--background) !important;
+  }
+  .main-content h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--textColor) !important;
+  }
+  .infolet-box {
+    background: var(--backgroundLight) !important;
+    border: none !important ;
+  }
+  .new-announcements ng-star-inserted {
+    background: var(--backgroundLight) !important;
+  }
+  .announcements section {
+    background: var(--backgroundLight) !important;
+    border: none;
+    border-bottom: 1px solid var(--dividerColor) !important;
+  }
+  .announcements section .announcement {
+    border-bottom: 1px solid var(--dividerColor) !important;
+  }
+  .announcements section h4,
+  .content {
+    color: var(--textColor) !important;
+  }
+  /* Task list */
+  .whats-due task-list {
+    background: var(--backgroundLight) !important;
+    border: none !important;
+  }
+  .whats-due .task {
+    background: var(--backgroundLight) !important;
+    border-bottom: 1px solid var(--dividerColor) !important;
+  }
+
+  /* Whats Next */
+  .whats-next up-next {
+    background: var(--backgroundLight) !important;
+    border: none !important;
+  }
+  .whats-next up-next span.title,
+  span.time,
+  span.location {
+    color: var(--textColor) !important;
+  }
+
+  /* Exam Countdown */
+
+  exam-countdown {
+    background: var(--backgroundLight) !important;
+    border: none !important;
+  }
+  exam-countdown span,
+  time {
+    color: var(--textColor) !important;
+  }
+
+  /* Surveys */
+  card-list article {
+    background: var(--backgroundLight) !important;
+    border: none !important;
+  }
+
+  card-list article .alert-info {
+    background: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+  card-list article p {
+    color: var(--textColor) !important;
+  }
+
+  /* this is fucked */
+  html body {
+    background-color: var(--backgroundLight) !important;
+  }
+
+  .view-summary {
+    color: var(--textColor);
+  }
+
+  p.edx-info {
+    color: var(--textSecondaryColor) !important;
+  }
+
+  /* Pagination */
+  .pagination > li:not(.disabled) > a,
+  .pagination > li > span {
+    background: var(--backgroundLight) !important;
+  }
+
+  .pagination > li > a,
+  .pagination > li > span {
+    border-color: var(--dividerColor) !important;
+    color: var(--linkColor);
+  }
 }
