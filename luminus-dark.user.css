@@ -741,6 +741,7 @@
 
   .option {
     background-color: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
   }
 
   .option-correct {
