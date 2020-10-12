@@ -8,31 +8,68 @@
 
 @-moz-document domain("luminus.nus.edu.sg") {
   body {
-    --primaryColor: #144990 !important;
+    --primaryColor: #0c3e75 !important;
     --primaryColorLight: #74a4e1 !important;
     --background: #121212 !important;
     --backgroundLight: #222 !important;
     --selectedButtonText: #ffbb82 !important;
     --hoveredButtonText: #ccc !important;
     --selectedBackground: #545659 !important;
-    --hoveredBackground: rgb(81, 81, 81) !important;
+    --hoveredBackground: #515151 !important;
     --activeBackground: #404040 !important;
+    --hoveredNavBackground: #293542 !important;
+    --selectedNavBackground: #354557 !important;
     --textColor: #dfdfdf !important;
     --textSecondaryColor: #a6a6a6 !important;
     --textFocusColor: #ccc !important;
     --borderColor: #333 !important;
     --hoverTextColor: #acacac !important;
-    --linkColor: rgb(126, 177, 242) !important;
+    --linkColor: #7eb1f2 !important;
     --accentColor: #fadc89 !important;
     --headingColor: #9b9b9b !important;
     --highlightColor: #404040 !important;
     --hintColor: #757575 !important;
     --dividerColor: #757575 !important;
+    --green: #73d05c !important;
   }
 
   body {
     background-color: var(--background);
     color: var(--textColor);
+  }
+
+  /* Secondary text */
+  h1 small,
+  h1 .small,
+  h2 small,
+  h2 .small,
+  h3 small,
+  h3 .small,
+  h4 small,
+  h4 .small,
+  h5 small,
+  h5 .small,
+  h6 small,
+  h6 .small,
+  .h1 small,
+  .h1 .small,
+  .h2 small,
+  .h2 .small,
+  .h3 small,
+  .h3 .small,
+  .h4 small,
+  .h4 .small,
+  .h5 small,
+  .h5 .small,
+  .h6 small,
+  .h6 .small {
+    color: var(--textSecondaryColor);
+  }
+
+  .task .task-info .module,
+  .task .task-info .due,
+  article .activity-info .title small {
+    color: var(--textSecondaryColor) !important;
   }
 
   /* Custom scrollbar */
@@ -59,6 +96,15 @@
 
   a {
     color: var(--linkColor);
+  }
+
+  /* Green */
+  .task.completed[_ngcontent-toc-c33] .from-now[_ngcontent-toc-c33] {
+    color: var(--green);
+  }
+
+  .task.completed :before {
+    background-color: var(--green) !important;
   }
 
   h1,
@@ -102,6 +148,25 @@
   .name.disable-select p.black {
     color: var(--textColor) !important;
   }
+  div.name-container[_ngcontent-toc-c62]
+    folder-icon[_ngcontent-toc-c62]
+    .icon-fill {
+    fill: var(--textColor) !important;
+  }
+
+  i.fa {
+    color: var(--textColor) !important;
+  }
+
+  div.name-container[_ngcontent-toc-c62]
+    folder-icon[_ngcontent-toc-c62]
+    .icon-stroke {
+    stroke: var(--textColor) !important;
+  }
+
+  folder-icon path {
+    fill: var(--backgroundLight) !important;
+  }
 
   .stat-icon svg g g.icon-fill {
     fill: white !important;
@@ -120,6 +185,11 @@
     aside:first-child,
     .layout-header {
       background: var(--backgroundLight) !important;
+    }
+
+    .main-content .layout-header,
+    .main-content tool-header:last-child {
+      background: var(--background) !important;
     }
   }
 
@@ -174,11 +244,11 @@
 
   nav.pills a.selected {
     color: var(--textColor);
-    background: var(--selectedBackground);
+    background: var(--selectedNavBackground);
   }
 
   nav.pills a:hover {
-    background: var(--hoveredBackground);
+    background: var(--hoveredNavBackground);
   }
 
   .module-navigation {
@@ -226,14 +296,21 @@
     border-color: var(--backgroundLight) !important;
   }
 
-  /* Article */
-  article:not(.terms-service):not(.no-content) {
+  /* Side bar announcements */
+  article:not(.terms-service):not(.no-content),
+  .upcoming-deadlines task-list div.task {
     background: var(--backgroundLight) !important;
     border-color: var(--backgroundLight) !important;
   }
 
   announcement-list-item article h3 {
     color: var(--textFocusColor) !important;
+  }
+
+  article time,
+  article span.byline,
+  article .delivery-channels {
+    color: var(--textSecondaryColor) !important;
   }
 
   article .content-wrapper .fade-out {
@@ -257,6 +334,10 @@
 
   .search-field > div .icon-fill {
     fill: var(--hintColor) !important;
+  }
+
+  select {
+    background: var(--backgroundLight);
   }
 
   /* Module cards */
@@ -289,7 +370,6 @@
   }
 
   /* Login Page */
-
   .homepage {
     background-color: var(--background) !important;
   }
@@ -329,6 +409,9 @@
   .announcements section h4,
   .content {
     color: var(--textColor) !important;
+  }
+  .content p span {
+    filter: brightness(4.5);
   }
   /* Task list */
   .whats-due task-list {
@@ -376,9 +459,8 @@
     color: var(--textColor) !important;
   }
 
-  /* this is fucked */
-  html body {
-    background-color: var(--backgroundLight) !important;
+  card-list iframe {
+    filter: invert(1);
   }
 
   .view-summary {
