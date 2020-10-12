@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.1
+@version        1.0.2
 @description    A dark theme for LumiNUS
 @author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
@@ -33,6 +33,7 @@
     --hintColor: #757575 !important;
     --dividerColor: #757575 !important;
     --green: #73d05c !important;
+    --red: #ff757e !important;
   }
 
   body {
@@ -103,12 +104,19 @@
   }
 
   /* Green */
-  .task.completed[_ngcontent-toc-c33] .from-now[_ngcontent-toc-c33] {
-    color: var(--green);
+  .task.completed .from-now,
+  .open {
+    color: var(--green) !important;
   }
 
   .task.completed :before {
     background-color: var(--green) !important;
+  }
+
+  /* Red */
+  .closed,
+  .mark-obtained-incorrect {
+    color: var(--red) !important;
   }
 
   h1,
@@ -349,7 +357,7 @@
   }
 
   @media (min-width: 1200px) {
-    section header > :last-child {
+    section header > div:last-child:not(.section-right) {
       background: var(--backgroundLight) !important;
       border-color: var(--dividerColor) !important;
     }
@@ -364,7 +372,7 @@
     border-color: var(--dividerColor) !important;
   }
 
-  label.checkbox input + span:before {
+  :not(.option-correct) > * > label.checkbox input + span:before {
     background-color: var(--selectedBackground) !important;
     border-color: var(--backgroundLight) !important;
   }
@@ -687,5 +695,77 @@
   .modal-dialog .modal-content .modal-header,
   .modal-dialog .modal-content .modal-footer {
     border-color: var(--dividerColor) !important;
+  }
+
+  /* Quiz */
+
+  .full-screen-splash {
+    background-color: var(--background) !important;
+  }
+
+  .full-screen-splash span,
+  .closing-section > span {
+    color: var(--textColor) !important;
+  }
+
+  #print-section {
+    background-color: var(--background) !important;
+  }
+
+  .closing-section,
+  .feedback-section {
+    background-color: transparent !important;
+  }
+
+  .legend-section {
+    background: var(--backgroundLight) !important;
+    border: none !important;
+  }
+
+  .question-feedback-header,
+  .question-solution-header,
+  .response-rationale-header {
+    background: var(--activeBackground) !important;
+  }
+
+  .question-feedback,
+  .question-solution,
+  .response-rationale {
+    background: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+
+  quiz-question-view img {
+    filter: invert() contrast(0.9) !important;
+  }
+
+  .option {
+    background-color: var(--backgroundLight) !important;
+  }
+
+  .option-correct {
+    background-color: rgba(51, 179, 102, 0.3) !important;
+  }
+
+  .option-incorrect {
+    background-color: rgba(200, 33, 40, 0.25) !important;
+  }
+
+  .question-feedback-header > span,
+  .question-solution-header > span,
+  .response-rationale-header > span {
+    color: var(--textColor) !important;
+  }
+
+  icon[name="comment"] {
+    filter: invert();
+  }
+
+  .option .radio input + span:before {
+    background: var(--backgroundLight) !important;
+  }
+  .option .radio input:checked + span:before {
+    border-color: var(--backgroundLight) !important;
+    background: var(--textColor) !important;
   }
 }
