@@ -8,24 +8,26 @@
 
 @-moz-document domain("luminus.nus.edu.sg") {
   body {
-    --primaryColor: #0c3e75 !important;
+    --primaryColor: #323232 !important;
     --primaryColorLight: #74a4e1 !important;
     --background: #121212 !important;
+    --backgroundLightHalf: #1f1f1f !important;
     --backgroundLight: #222 !important;
     --selectedButtonText: #ffbb82 !important;
     --hoveredButtonText: #ccc !important;
     --selectedBackground: #545659 !important;
-    --hoveredBackground: #515151 !important;
     --activeBackground: #404040 !important;
+    --hoveredBackground: #515151 !important;
+    --activeNavBackground: #354557 !important;
     --hoveredNavBackground: #293542 !important;
-    --selectedNavBackground: #354557 !important;
+    --activeMainNavBackground: #44586d !important;
+    --hoveredMainNavBackground: #354557 !important;
     --textColor: #dfdfdf !important;
     --textSecondaryColor: #a6a6a6 !important;
     --textFocusColor: #ccc !important;
-    --borderColor: #333 !important;
     --hoverTextColor: #acacac !important;
-    --linkColor: #7eb1f2 !important;
-    --accentColor: #fadc89 !important;
+    --linkColor: #8cb6e9 !important;
+    --accentColor: #fac789 !important;
     --headingColor: #9b9b9b !important;
     --highlightColor: #404040 !important;
     --hintColor: #757575 !important;
@@ -81,20 +83,22 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--backgroundLight);
+    background: var(--backgroundLight) !important;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--selectedBackground);
+    background: var(--selectedBackground) !important;
   }
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #555 !important;
   }
 
-  a {
+  a,
+  .btn-link,
+  .btn-icon {
     color: var(--linkColor);
   }
 
@@ -116,12 +120,18 @@
     color: var(--primaryColorLight);
   }
 
+  .hint {
+    color: var(--textSecondaryColor) !important;
+  }
+
   .single-module {
     background: var(--background) !important;
   }
 
   nav.pills.vertical .color-blue,
-  ol.breadcrumb a {
+  ol.breadcrumb a,
+  .alerts .pinned-news .notification-item .notification-info span,
+  .alerts .notifications .notification-item .notification-info span {
     color: var(--primaryColorLight) !important;
   }
 
@@ -148,9 +158,9 @@
   .name.disable-select p.black {
     color: var(--textColor) !important;
   }
-  div.name-container[_ngcontent-toc-c62]
-    folder-icon[_ngcontent-toc-c62]
-    .icon-fill {
+
+  /* Icons */
+  div.name-container folder-icon .icon-fill {
     fill: var(--textColor) !important;
   }
 
@@ -158,9 +168,11 @@
     color: var(--textColor) !important;
   }
 
-  div.name-container[_ngcontent-toc-c62]
-    folder-icon[_ngcontent-toc-c62]
-    .icon-stroke {
+  .meetingPassword icon {
+    filter: invert() brightness(0.75);
+  }
+
+  div.name-container folder-icon .icon-stroke {
     stroke: var(--textColor) !important;
   }
 
@@ -172,9 +184,28 @@
     fill: white !important;
   }
 
+  .icon-wrapper > icon {
+    /*     fill: white !important; */
+    filter: invert();
+  }
+
+  .icon-stroke {
+    stroke: white !important;
+  }
+
+  /* Left sidenav */
   @media (min-width: 1200px) {
-    .main-nav {
+    .main-nav,
+    .subapplication-navigation {
       background-color: var(--primaryColor) !important;
+    }
+
+    .main-nav ul a:hover {
+      background-color: var(--hoveredMainNavBackground) !important;
+    }
+
+    .main-nav ul a:active {
+      background-color: var(--activeMainNavBackground) !important;
     }
 
     .main-content {
@@ -182,14 +213,23 @@
       color: var(--textColor);
     }
 
+    /* Side nav for profile page */
+    ng-component > aside {
+      background: var(--backgroundLight) !important;
+    }
+
     aside:first-child,
     .layout-header {
       background: var(--backgroundLight) !important;
     }
 
-    .main-content .layout-header,
-    .main-content tool-header:last-child {
+    .main-content .layout-header {
       background: var(--background) !important;
+    }
+
+    .main-content tool-header:last-child {
+      background: var(--backgroundLightHalf) !important;
+      border: none;
     }
   }
 
@@ -211,6 +251,10 @@
     .main-nav a.active,
     .subapplication-navigation a.active {
       border-color: var(--accentColor) !important;
+    }
+
+    aside {
+      background: var(--backgroundLightHalf);
     }
   }
 
@@ -242,9 +286,10 @@
     color: var(--textColor);
   }
 
-  nav.pills a.selected {
+  nav.pills a.selected,
+  nav.pills .overview-selected {
     color: var(--textColor);
-    background: var(--selectedNavBackground);
+    background: var(--activeNavBackground);
   }
 
   nav.pills a:hover {
@@ -253,6 +298,26 @@
 
   .module-navigation {
     background-color: var(--background) !important;
+  }
+
+  .fixed-things.nav-tab,
+  .nav-wrap nav.nav.nav-underline {
+    background: var(--backgroundLightHalf) !important;
+  }
+
+  @media (min-width: 768px) {
+    .main-content > .header {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 4.1666666667vw !important;
+      padding-right: 4.1666666667vw !important;
+      background: var(--backgroundLightHalf);
+      border: none;
+    }
+
+    .main-content .layout-header {
+      background: var(--backgroundLightHalf) !important;
+    }
   }
 
   .infolet-box,
@@ -271,11 +336,14 @@
     aside .layout-header small {
       color: var(--primaryColorLight) !important;
     }
+
+    .horizontal .nav.nav-underline {
+      border-bottom: none !important;
+    }
   }
 
   /* Task report */
-  section column,
-  list-view-tools {
+  section column {
     background: var(--backgroundLight) !important;
     border-color: var(--dividerColor) !important;
   }
@@ -284,6 +352,11 @@
     section header > :last-child {
       background: var(--backgroundLight) !important;
       border-color: var(--dividerColor) !important;
+    }
+
+    .subapplication-navigation a.active,
+    .subapplication-navigation .btn-link.active {
+      border-bottom-color: var(--accentColor) !important;
     }
   }
 
@@ -297,7 +370,7 @@
   }
 
   /* Side bar announcements */
-  article:not(.terms-service):not(.no-content),
+  task-list article,
   .upcoming-deadlines task-list div.task {
     background: var(--backgroundLight) !important;
     border-color: var(--backgroundLight) !important;
@@ -321,6 +394,49 @@
     ) !important;
   }
 
+  /* Tool buttons */
+  a.tool {
+    color: var(--textColor) !important;
+  }
+
+  a.tool:hover {
+    background: var(--hoveredBackground) !important;
+  }
+
+  a.tool[_ngcontent-sfw-c30]:active {
+    background: var(--activeBackground) !important;
+  }
+
+  /* Lesson view */
+  .activity-list {
+    border-color: var(--dividerColor) !important;
+  }
+
+  .activity-list > *,
+  .lesson-view header,
+  .lesson-view .activity-list activity-list-item:not(:first-child),
+  .lessons {
+    background: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+
+  .lessons .lesson {
+    color: var(--textColor) !important;
+  }
+
+  .lessons .lesson.current {
+    background-color: var(--hoveredBackground) !important;
+  }
+
+  .lessons .lesson.selected span {
+    background-color: var(--accentColor) !important;
+    color: var(--background) !important;
+  }
+
+  .lesson.arrow .icon-stroke polyline {
+    stroke: var(--textColor) !important;
+  }
+
   /* Form control */
   .form-control {
     background: var(--backgroundLight);
@@ -338,6 +454,42 @@
 
   select {
     background: var(--backgroundLight);
+  }
+
+  .toggle-label {
+    border-color: var(--dividerColor) !important;
+  }
+
+  .toggle-inner:after {
+    color: var(--textColor) !important;
+    background-color: var(--backgroundLight) !important;
+  }
+
+  .toggle-switch {
+    background: var(--activeBackground) !important;
+    border-color: var(--dividerColor) !important;
+  }
+
+  .countdown progress-bar .bar-wrapper,
+  progress-bar .default {
+    background: var(--activeBackground) !important;
+  }
+
+  .countdown progress-bar .bar-wrapper bar > .success {
+    background: var(--primaryColorLight);
+  }
+
+  .header-toggle {
+    border-color: var(--green) !important;
+  }
+
+  .header-toggle .inactive {
+    background: var(--backgroundLight) !important;
+  }
+
+  .header-toggle .active {
+    background: var(--green) !important;
+    color: black !important;
   }
 
   /* Module cards */
@@ -382,30 +534,37 @@
   p {
     color: var(--textColor) !important;
   }
+
   .main-content {
     background: var(--background) !important;
   }
+
   .main-content h1,
   h2,
   h3,
   h4 {
     color: var(--textColor) !important;
   }
+
   .infolet-box {
     background: var(--backgroundLight) !important;
     border: none !important ;
   }
+
   .new-announcements ng-star-inserted {
     background: var(--backgroundLight) !important;
   }
+
   .announcements section {
     background: var(--backgroundLight) !important;
     border: none;
     border-bottom: 1px solid var(--dividerColor) !important;
   }
+
   .announcements section .announcement {
     border-bottom: 1px solid var(--dividerColor) !important;
   }
+
   .announcements section h4,
   .content {
     color: var(--textColor) !important;
@@ -413,6 +572,7 @@
   .content p span {
     filter: brightness(4.5);
   }
+
   /* Task list */
   .whats-due task-list {
     background: var(--backgroundLight) !important;
@@ -421,6 +581,16 @@
   .whats-due .task {
     background: var(--backgroundLight) !important;
     border-bottom: 1px solid var(--dividerColor) !important;
+  }
+
+  /* Media page */
+  .alert-warning {
+    background-color: #3a2f1a !important;
+    border-color: #3a2f1a !important;
+  }
+
+  .media-info {
+    background-color: var(--background) !important;
   }
 
   /* Whats Next */
@@ -435,7 +605,6 @@
   }
 
   /* Exam Countdown */
-
   exam-countdown {
     background: var(--backgroundLight) !important;
     border: none !important;
@@ -471,6 +640,30 @@
     color: var(--textSecondaryColor) !important;
   }
 
+  /* User profile */
+  user-profile-card {
+    background-color: var(--backgroundLight) !important;
+  }
+
+  /* Module search */
+  .filters,
+  .criteria,
+  .module-type {
+    background-color: var(--backgroundLight) !important;
+  }
+
+  /* Notifications */
+  .alerts .pinned-news h3,
+  .alerts .notifications h3 {
+    background-color: var(--backgroundLight) !important;
+  }
+
+  .alerts .pinned-news h3,
+  .alerts .pinned-news .notification-item,
+  .alerts .notifications .notification-item {
+    border-color: var(--dividerColor) !important;
+  }
+
   /* Pagination */
   .pagination > li:not(.disabled) > a,
   .pagination > li > span {
@@ -481,5 +674,18 @@
   .pagination > li > span {
     border-color: var(--dividerColor) !important;
     color: var(--linkColor);
+  }
+
+  /* Dialogs */
+  .modal-dialog .modal-content,
+  .modal-dialog .modal-content .modal-header,
+  .modal-dialog .modal-content .modal-body,
+  .modal-dialog .modal-content .modal-footer {
+    background-color: var(--backgroundLight) !important;
+  }
+
+  .modal-dialog .modal-content .modal-header,
+  .modal-dialog .modal-content .modal-footer {
+    border-color: var(--dividerColor) !important;
   }
 }
