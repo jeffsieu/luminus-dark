@@ -1,0 +1,31 @@
+{
+  "name": "luminus-dark",
+  "version": "1.0.0",
+  "description": "A dark theme for LumiNUS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffsieu/luminus-dark.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeffsieu/luminus-dark/issues"
+  },
+  "homepage": "https://github.com/jeffsieu/luminus-dark#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.3.0",
+    "pretty-quick": "^3.0.2"
+  },
+  "dependencies": {
+    "prettier": "^2.1.2"
+  }
+}
