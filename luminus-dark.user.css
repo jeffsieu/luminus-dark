@@ -590,6 +590,11 @@
     border-color: #3a2f1a !important;
   }
 
+  .alert-info {
+    background-color: #233b46 !important;
+    border-color: var(--dividerColor) !important;
+  }
+
   .media-info {
     background-color: var(--background) !important;
   }
