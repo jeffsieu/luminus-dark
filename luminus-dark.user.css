@@ -765,7 +765,7 @@
 
   /* Forums */
   @media (min-width: 1200px) {
-    section header > div:last-child:not(.section-right) {
+    section header > div:last-child:not(.section-right):not(.tools) {
       background-color: var(--background) !important;
     }
     section list-view-item small span {
