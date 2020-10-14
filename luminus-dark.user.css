@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.3
+@version        1.0.4
 @description    A dark theme for LumiNUS
 @author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
@@ -185,8 +185,8 @@
     fill: white !important;
   }
 
+  .tool > icon,
   .icon-wrapper > icon {
-    /*     fill: white !important; */
     filter: invert();
   }
 
@@ -439,9 +439,14 @@
   }
 
   /* Form control */
-  .form-control {
+  .form-control:not([type="date"]) {
     background: var(--backgroundLight);
     border-color: var(--dividerColor);
+    color: var(--textColor);
+  }
+
+  .form-control[type="date"] {
+    filter: invert() contrast(0.85) brightness(1.4);
   }
 
   .search-field > div icon[name="search"] {
@@ -480,16 +485,38 @@
     background: var(--primaryColorLight);
   }
 
-  .header-toggle {
-    border-color: var(--green) !important;
-  }
-
-  .header-toggle .inactive {
+  /* Pagination and toggle button */
+  .pagination > li:not(.disabled):not(.active) > a,
+  .pagination > li > span {
     background: var(--backgroundLight) !important;
   }
 
-  .header-toggle .active {
-    background: var(--green) !important;
+  .pagination > li:not(.active) > a:hover,
+  .header-toggle .inactive:hover {
+    background: var(--hoveredNavBackground) !important;
+  }
+
+  .pagination > li > a,
+  .pagination > li > a:hover,
+  .pagination > li > span {
+    border-color: var(--dividerColor) !important;
+    color: var(--linkColor);
+  }
+
+  .header-toggle {
+    border-color: var(--primaryColorLight) !important;
+  }
+
+  .header-toggle .inactive {
+    color: var(--textSecondaryColor) !important;
+    background: var(--backgroundLight) !important;
+    border-color: var(--textSecondaryColor) !important;
+  }
+
+  .header-toggle .active,
+  .pagination > .active > a {
+    background: var(--primaryColorLight) !important;
+    background-color: var(--primaryColorLight) !important;
     color: black !important;
   }
 
@@ -670,18 +697,6 @@
     border-color: var(--dividerColor) !important;
   }
 
-  /* Pagination */
-  .pagination > li:not(.disabled) > a,
-  .pagination > li > span {
-    background: var(--backgroundLight) !important;
-  }
-
-  .pagination > li > a,
-  .pagination > li > span {
-    border-color: var(--dividerColor) !important;
-    color: var(--linkColor);
-  }
-
   /* Dialogs */
   .modal-dialog .modal-content,
   .modal-dialog .modal-content .modal-header,
@@ -821,7 +836,7 @@
   ng-component section div posting .details {
     background: var(--backgroundLight) !important;
   }
-  form {
+  :not(.date-filter) > form {
     background: var(--backgroundLight) !important;
   }
   #cke_editor1 {
