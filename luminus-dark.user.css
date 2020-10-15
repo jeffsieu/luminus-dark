@@ -783,6 +783,11 @@
     background: var(--textColor) !important;
   }
 
+  .rich-html {
+    background: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+
   /* Forums */
   @media (min-width: 1200px) {
     section header > div:last-child:not(.section-right):not(.tools) {
@@ -836,7 +841,7 @@
   ng-component section div posting .details {
     background: var(--backgroundLight) !important;
   }
-  :not(.date-filter) > form {
+  :not(.date-filter):not(question-view-mcq):not(question-view-ess) > form {
     background: var(--backgroundLight) !important;
   }
   #cke_editor1 {
