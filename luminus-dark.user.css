@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.4
+@version        1.0.5
 @description    A dark theme for LumiNUS
 @author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
@@ -730,9 +730,24 @@
     background-color: transparent !important;
   }
 
-  .legend-section {
+  .legend-section,
+  .full-screen-footer {
     background: var(--backgroundLight) !important;
     border: none !important;
+  }
+
+  .section-title {
+    border-color: var(--dividerColor) !important;
+  }
+
+  .full-screen-header {
+    background-color: var(--backgroundLight) !important;
+    border: none !important;
+  }
+
+  .question-container {
+    background: var(--background) !important;
+    border-color: var(--dividerColor) !important;
   }
 
   .question-feedback-header,
@@ -748,8 +763,20 @@
     border-color: var(--dividerColor) !important;
   }
 
-  quiz-question-view img {
+  quiz-question-view .question-header div[mathjax] img {
     filter: invert() contrast(0.9) !important;
+  }
+
+  quiz-question-view .question-type div[mathjax] img {
+    filter: invert() contrast(0.8) brightness(1.3) !important;
+  }
+
+  quiz-question-view form:before {
+    border-bottom-color: var(--dividerColor) !important;
+  }
+
+  quiz-question-view form:after {
+    border-bottom-color: var(--backgroundLight) !important;
   }
 
   .option {
@@ -841,8 +868,13 @@
   ng-component section div posting .details {
     background: var(--backgroundLight) !important;
   }
-  :not(.date-filter):not(question-view-mcq):not(question-view-ess) > form {
+  :not(.date-filter):not(question-view-mcq):not(question-view-ess):not(question-view-fib):not(question-view-tof):not(question-view-mrq)
+    > form {
     background: var(--backgroundLight) !important;
+  }
+
+  .input .valid-number {
+    background-color: var(--backgroundLight) !important;
   }
   #cke_editor1 {
     filter: invert(1) !important;
