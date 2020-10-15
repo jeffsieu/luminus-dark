@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.5
+@version        1.0.6
 @description    A dark theme for LumiNUS
 @author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
@@ -116,6 +116,7 @@
 
   /* Red */
   .closed,
+  .closed-text,
   .mark-obtained-incorrect {
     color: var(--red) !important;
   }
@@ -194,11 +195,25 @@
     stroke: white !important;
   }
 
+  @media (max-width: 767px) {
+    main-nav {
+      background: var(--backgroundLight) !important;
+    }
+
+    .subapplication-navigation a:not(.active) {
+      border-color: var(--backgroundLight) !important;
+    }
+  }
+
   /* Left sidenav */
   @media (min-width: 1200px) {
     .main-nav,
     .subapplication-navigation {
       background-color: var(--primaryColor) !important;
+    }
+
+    .subapplication-navigation a.active {
+      color: var(--accentColor) !important;
     }
 
     .main-nav ul a:hover {
@@ -289,7 +304,7 @@
 
   nav.pills a.selected,
   nav.pills .overview-selected {
-    color: var(--textColor);
+    color: var(--linkColor) !important;
     background: var(--activeNavBackground);
   }
 
@@ -304,6 +319,12 @@
   .fixed-things.nav-tab,
   .nav-wrap nav.nav.nav-underline {
     background: var(--backgroundLightHalf) !important;
+  }
+
+  .nav-underline a.active,
+  .nav-underline .btn-link.active,
+  .nav-underline .active.btn-icon {
+    border-color: var(--accentColor) !important;
   }
 
   @media (min-width: 768px) {
@@ -366,8 +387,12 @@
   }
 
   :not(.option-correct) > * > label.checkbox input + span:before {
-    background-color: var(--selectedBackground) !important;
     border-color: var(--backgroundLight) !important;
+  }
+
+  .option .checkbox input:not(:checked) + span:before {
+    background: var(--background) !important;
+    border: 1px solid var(--dividerColor) !important;
   }
 
   /* Side bar announcements */
@@ -485,6 +510,14 @@
     background: var(--primaryColorLight);
   }
 
+  .line-series path.line {
+    stroke: var(--accentColor) !important;
+  }
+
+  table * {
+    border-color: var(--dividerColor) !important;
+  }
+
   /* Pagination and toggle button */
   .pagination > li:not(.disabled):not(.active) > a,
   .pagination > li > span {
@@ -543,9 +576,27 @@
     color: var(--textSecondaryColor) !important;
   }
 
+  multimedia-statistics-chart {
+    background-color: var(--backgroundLight) !important;
+    border-color: var(--dividerColor) !important;
+  }
+
+  multimedia-statistics-chart .intervals-wrapper,
+  multimedia-statistics-chart .date-range-wrapper {
+    border-color: var(--dividerColor) !important;
+  }
+
+  .intervals-wrapper button {
+    color: var(--textSecondaryColor) !important;
+  }
+
+  .intervals-wrapper button.active {
+    color: var(--accentColor) !important;
+  }
+
   /* Mini nav bar */
-  .horizontal .nav.nav-underline > *.active {
-    color: var(--textFocusColor) !important;
+  .horizontal .nav.nav-underline > .active {
+    color: var(--accentColor) !important;
     border-bottom-color: var(--accentColor) !important;
   }
 
@@ -711,7 +762,6 @@
   }
 
   /* Quiz */
-
   .full-screen-splash {
     background-color: var(--background) !important;
   }
@@ -802,12 +852,16 @@
     filter: invert();
   }
 
+  publish-status icon {
+    filter: invert() !important;
+  }
+
   .option .radio input + span:before {
     background: var(--backgroundLight) !important;
   }
   .option .radio input:checked + span:before {
     border-color: var(--backgroundLight) !important;
-    background: var(--textColor) !important;
+    background: #44bc42 !important;
   }
 
   .rich-html {
@@ -868,7 +922,7 @@
   ng-component section div posting .details {
     background: var(--backgroundLight) !important;
   }
-  :not(.date-filter):not(question-view-mcq):not(question-view-ess):not(question-view-fib):not(question-view-tof):not(question-view-mrq)
+  :not(.date-filter):not(question-view-mcq):not(question-view-ess):not(question-view-fib):not(question-view-tof):not(question-view-mrq):not(header)
     > form {
     background: var(--backgroundLight) !important;
   }
