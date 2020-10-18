@@ -559,6 +559,9 @@
     border-color: var(--backgroundLight) !important;
     color: var(--textColor) !important;
   }
+  a.module-card h4{
+    padding-bottom: 5px;
+  }
 
   a.module-card:hover {
     border-color: var(--accentColor) !important;
@@ -796,7 +799,7 @@
   }
 
   .question-container {
-    background: var(--background) !important;
+    background: var(--backgroundLight) !important;
     border-color: var(--dividerColor) !important;
   }
 
@@ -868,6 +871,10 @@
     background: var(--backgroundLight) !important;
     border-color: var(--dividerColor) !important;
   }
+  .option .checkbox input:not(:checked) + span:before{
+    background: var(--background) !important;
+    border: 1px solid var(--dividerColor) !important;
+  }
 
   /* Forums */
   @media (min-width: 1200px) {
@@ -924,17 +931,21 @@
   }
   :not(.date-filter):not(question-view-mcq):not(question-view-ess):not(question-view-fib):not(question-view-tof):not(question-view-mrq):not(header)
     > form {
-    background: var(--backgroundLight) !important;
+    background: var(--background) !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid var(--dividerColor) !important;
+    border-radius: 5px
   }
 
   .input .valid-number {
     background-color: var(--backgroundLight) !important;
   }
-  #cke_editor1 {
+  .cke_chrome {
     filter: invert(1) !important;
-    color: var(--textColor) !important;
+  
   }
-  #cke_editor1 span {
+  .cke_chrome span {
     color: var(--invertedTextWhite) !important;
   }
 
@@ -947,5 +958,10 @@
   section div list-view-item list-view-tools {
     background: var(--backgroundLight) !important;
     border-color: var(--dividerColor) !important;
+  }
+
+  /* Surveys */
+  .full-screen-body{
+    background: var(--background) !important;
   }
 }
