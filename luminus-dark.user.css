@@ -117,7 +117,8 @@
   /* Red */
   .closed,
   .closed-text,
-  .mark-obtained-incorrect {
+  .mark-obtained-incorrect,
+  header span.text-danger {
     color: var(--red) !important;
   }
 
@@ -648,7 +649,9 @@
   }
 
   .announcements section h4,
-  .content {
+  .content,
+  .files-drop-zone .link,
+  .files-drop-zone a {
     color: var(--textColor) !important;
   }
   .content p span {
