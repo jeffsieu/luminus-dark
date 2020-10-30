@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.6
+@version        1.0.7
 @description    A dark theme for LumiNUS
 @author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
@@ -175,7 +175,8 @@
     color: var(--textColor) !important;
   }
 
-  .meetingPassword icon {
+  .meetingPassword icon,
+  icon[name="close"] {
     filter: invert() brightness(0.75);
   }
 
@@ -365,6 +366,12 @@
     }
   }
 
+  @media (min-width: 1200px) {
+    aside header p {
+      color: var(--textSecondaryColor) !important;
+    }
+  }
+
   /* Task report */
   section column {
     background: var(--backgroundLight) !important;
@@ -394,6 +401,10 @@
   .option .checkbox input:not(:checked) + span:before {
     background: var(--background) !important;
     border: 1px solid var(--dividerColor) !important;
+  }
+
+  .checkbox input:not(:checked) + span:before {
+    background: var(--activeBackground) !important;
   }
 
   /* Side bar announcements */
@@ -560,7 +571,7 @@
     border-color: var(--backgroundLight) !important;
     color: var(--textColor) !important;
   }
-  a.module-card h4{
+  a.module-card h4 {
     padding-bottom: 5px;
   }
 
@@ -623,6 +634,8 @@
   }
 
   .main-content h1,
+  header h1,
+  header h1 > *,
   h2,
   h3,
   h4 {
@@ -631,7 +644,7 @@
 
   .infolet-box {
     background: var(--backgroundLight) !important;
-    border: none !important ;
+    border: none !important;
   }
 
   .new-announcements ng-star-inserted {
@@ -827,17 +840,27 @@
     filter: invert() contrast(0.8) brightness(1.3) !important;
   }
 
-  quiz-question-view form:before {
+  quiz-question-view form:before,
+  poll-question-mcq form:before {
     border-bottom-color: var(--dividerColor) !important;
   }
 
-  quiz-question-view form:after {
+  quiz-question-view form:after,
+  poll-question-mcq form:after {
     border-bottom-color: var(--backgroundLight) !important;
   }
 
   .option {
     background-color: var(--backgroundLight) !important;
     border-color: var(--dividerColor) !important;
+  }
+
+  .option-bar {
+    background-color: var(--selectedBackground) !important;
+  }
+
+  .option .percentage {
+    background-color: var(--hoveredBackground) !important;
   }
 
   .option-correct {
@@ -874,7 +897,7 @@
     background: var(--backgroundLight) !important;
     border-color: var(--dividerColor) !important;
   }
-  .option .checkbox input:not(:checked) + span:before{
+  .option .checkbox input:not(:checked) + span:before {
     background: var(--background) !important;
     border: 1px solid var(--dividerColor) !important;
   }
@@ -932,13 +955,9 @@
   ng-component section div posting .details {
     background: var(--backgroundLight) !important;
   }
-  :not(.date-filter):not(question-view-mcq):not(question-view-ess):not(question-view-fib):not(question-view-tof):not(question-view-mrq):not(header)
+  :not(aside):not(.date-filter):not(question-view-mcq):not(question-view-ess):not(question-view-fib):not(question-view-tof):not(question-view-mrq):not(header)
     > form {
     background: var(--background) !important;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 1px solid var(--dividerColor) !important;
-    border-radius: 5px
   }
 
   .input .valid-number {
@@ -946,15 +965,9 @@
   }
   .cke_chrome {
     filter: invert(1) !important;
-  
   }
   .cke_chrome span {
     color: var(--invertedTextWhite) !important;
-  }
-
-  /* Multimedia */
-  ng-component iframe {
-    filter: invert(1) hue-rotate(180deg) !important;
   }
 
   /* Web Lecture */
@@ -964,7 +977,7 @@
   }
 
   /* Surveys */
-  .full-screen-body{
+  .full-screen-body {
     background: var(--background) !important;
   }
 }
