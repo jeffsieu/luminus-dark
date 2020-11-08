@@ -816,7 +816,31 @@
 
   .question-container {
     background: var(--backgroundLight) !important;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--dividerColor) !important;
+  }
+  .connector {
+    stroke: var(--dividerColor) !important;
+    stroke-width: 1 !important;
+  }
+
+  .option-container {
+    background-color: var(--backgroundLightHalf) !important;
     border-color: var(--dividerColor) !important;
+  }
+  .option-container span{
+    color: var(--textColor) !important;
+
+  }
+
+  .danger-message {
+    background: var(--background);
+  }
+
+  .message-base, .danger-message, .success-message, .warning-message{
+    border: 1px solid var(--dividerColor) !important;
+    border-radius: 2px;
   }
 
   .question-feedback-header,
