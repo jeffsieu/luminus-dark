@@ -1004,4 +1004,10 @@
   .full-screen-body {
     background: var(--background) !important;
   }
+
+  /* Quiz Answers */
+
+  .answer-fib {
+    background-color: var(--background) !important;
+  }
 }
