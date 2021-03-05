@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.11
+@version        1.0.12
 @description    A dark theme for LumiNUS
 @author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
@@ -568,9 +568,15 @@
     stroke: var(--accentColor) !important;
   }
 
-  table {
+  :not(.infolet-box) > table,
+  :not(.infolet-box) > table td,
+  :not(.infolet-box) > table th {
     color: initial !important;
-    filter: invert(1);
+    filter: hue-rotate(180deg) invert(1);
+  }
+  
+  :not(.infolet-box) > table [style*="color: black"] {
+    color: initial !important;
   }
 
   .infolet .infolet-table table.table thead {
