@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           LumiNUS Dark
 @namespace      github.com/jeffsieu/luminus-dark
-@version        1.0.10
+@version        1.0.11
 @description    A dark theme for LumiNUS
 @author         Jeff Sieu & Jonathan Lee
 ==/UserStyle== */
@@ -209,9 +209,17 @@
     color: var(--textColor) !important;
   }
 
-  .meetingPassword icon,
-  icon[name="close"] {
+  .meetingPassword icon {
     filter: invert() brightness(0.75);
+  }
+
+  button.close {
+    opacity: 0.6 !important;
+  }
+  
+  .close:hover,
+  .close:focus {
+    opacity: 0.8 !important;
   }
 
   div.name-container folder-icon {
@@ -560,12 +568,13 @@
     stroke: var(--accentColor) !important;
   }
 
-  table * {
-    border-color: var(--dividerColor) !important;
+  table {
+    color: initial !important;
+    filter: invert(1);
   }
 
   .infolet .infolet-table table.table thead {
-    background-color: var(--backgroundLight);
+    background-color: var(--backgroundLight) !important;
   }
 
   /* Pagination and toggle button */
@@ -703,7 +712,6 @@
   .files-drop-zone .link,
   .files-drop-zone a,
   .content li,
-  table,
   [style*="color: #333333"],
   .user-name {
     color: var(--textColor) !important;
